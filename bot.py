@@ -31,7 +31,7 @@ def type_of_tax_sys(message):
 def choose_sys(message):
     if message.text == "ДОХОДЫ":
         msg = bot.send_message(message.chat.id, 'ВВЕДИТЕ СУММУ ДОХОДОВ: ')
-        bot.register_next_step_handler(msg, get_income_only, msg)
+        bot.register_next_step_handler(msg, get_income_only)
     elif message.text == "ДОХОДЫ МИНУС РАСХОДЫ":
         msg1 = bot.send_message(message.chat.id, 'ВВЕДИТЕ СУММУ ДОХОДОВ: ')
         bot.register_next_step_handler(msg1, get_income)
